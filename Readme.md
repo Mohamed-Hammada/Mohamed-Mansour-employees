@@ -16,18 +16,13 @@ or
         mvn spring-boot:run -Drun.arguments="spring.profiles.active=test"
 ```
 
-## REST API
+## How to use
 
-## Get Longest Employee Pairs
-### Request
+* Run the application
+* Go to http://localhost:8080 
+* Upload CSV File with this exact header (EmpID,ProjectID,DateFrom,DateTo)
 
-`POST /reports/longestEmployeePairs/`
+## Note 
+* Date can only be null or with this format 'yyyy-MM-dd'
 
-    curl -v -F 'file=yourfilePath' http://localhost:8080/reports/longestEmployeePairs/
-
-### Response
-
-    Status: 200
-    Content-Type: application/json
-    {"10":{"empIdOne": 218,"empIdTwo": 143,"overlap": 8}}
 
