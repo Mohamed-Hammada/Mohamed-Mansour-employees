@@ -27,8 +27,8 @@ public class LoadEmployeeDataUtiles {
 			for (CSVRecord csvRecord : csvParser) {
 				Long empID = StringConversion.getLongCellValue(csvRecord.get("EmpID"));
 				Long projectID = StringConversion.getLongCellValue(csvRecord.get("ProjectID"));
-				LocalDate dateFrom = DateUtiles.getLocalDate(csvRecord.get("DateFrom"));
-				LocalDate dateTo = DateUtiles.getLocalDate(csvRecord.get("DateTo"));
+				LocalDate dateFrom = DateUtiles.getLocalDate(csvRecord.get("DateFrom" ), "from");
+				LocalDate dateTo = DateUtiles.getLocalDate(csvRecord.get("DateTo" ), "to");
 				data.add(new Data(empID, projectID, new Period(dateFrom, dateTo)));
 			}
 		}

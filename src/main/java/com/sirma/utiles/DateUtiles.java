@@ -8,10 +8,10 @@ import com.sirma.dtos.Period;
 
 public class DateUtiles {
 
-	public static LocalDate getLocalDate(String date) {
+	public static LocalDate getLocalDate(String date ,String type) {
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		LocalDate lDate = null;
-		if (date == null || date.isEmpty()) {
+		if (date == null || date.isEmpty() && type.equals("to")) {
 			lDate = LocalDate.now();
 		} else {
 			lDate = LocalDate.parse(date, format);
