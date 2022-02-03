@@ -45,7 +45,7 @@ public class ReportsServiceImp implements ReportsService {
 
 			if (resultsDataIfItsExist != null) {
 				if (resultsDataIfItsExist.getOverlap() < resultsData.getOverlap()) {
-					result.put(emploeeOne.getProjectId(), resultsDataIfItsExist);
+					result.put(emploeeOne.getProjectId(), resultsData);
 				}
 			} else {
 				if (resultsData != null)
